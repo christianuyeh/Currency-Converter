@@ -1,0 +1,288 @@
+.custom-curve {
+
+  overflow: hidden; 
+  position: relative;
+  height: 100px;
+  border-radius: 30px;
+
+  }
+
+  .custom-curve::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    border: 1px solid #D1D5DB;
+    border-radius: 30px;
+
+  }
+  .custom-curve::after{
+    content: "";
+    position: absolute;
+    width: 88px;
+    height: 156px;
+    left: 54%;
+    margin-left: -69px;
+    bottom: -131px;
+    border-radius: 100%;
+    border: 1px solid #D1D5DB;
+    background-color: white;
+  }
+
+  .custom-curve2{
+    
+    overflow: hidden; 
+    position: relative;
+    border-radius: 30px;
+  }
+  .custom-curve2::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 30px;
+
+  }
+  .custom-curve2::after{
+    content: "";
+    position: absolute;
+    width: 107px;
+    height: 156px;
+    left: 52.5%;
+    margin-left: -69px;
+    bottom: -131px;
+    border-radius: 100%;
+    background-color: #F9FAFB;
+  }
+
+/* button curve */
+
+.custom-curve-bottom {
+
+  overflow: hidden; 
+  position: relative;
+  height: 100px;
+  border-radius: 30px;
+  margin-top: -18px;
+
+  }
+
+  .custom-curve-bottom::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    border: 1px solid #D1D5DB;
+    border-radius: 30px;
+
+  }
+  .custom-curve-bottom::after{
+    content: "";
+    position: absolute;
+    width: 88px;
+    height: 156px;
+    left: 54%;
+    margin-left: -69px;
+    top: -131px;
+    border-radius: 100%;
+    border: 1px solid #D1D5DB;
+    background-color: white;
+  }
+
+  .custom-curve2-bottom{
+    
+    overflow: hidden; 
+    position: relative;
+    border-radius: 30px;
+  }
+  .custom-curve2-bottom::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 30px;
+
+  }
+  .custom-curve2-bottom::after{
+    content: "";
+    position: absolute;
+    width: 107px;
+    height: 156px;
+    left: 52.5%;
+    margin-left: -69px;
+    top: -131px;
+    border-radius: 100%;
+    background-color: #F9FAFB;
+  }
+
+  .flag{
+    justify-content: center;
+    min-width: 30px;
+    height: 20px;
+    border: 1px solid #D1D5DB;
+    background-color: #D1D5DB;
+    border-radius: 3px;
+    font-size: 0;
+  }
+  .currency-box {
+    transition: transform 0.3s ease;
+  }
+  
+  /* Animation classes */
+  .move-up {
+    animation: moveUp 0.3s forwards;
+  }
+  
+  .move-down {
+    animation: moveDown 0.3s forwards;
+  }
+  
+  @keyframes moveUp {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-60px);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes moveDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(60px);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+
+  .bigger-switch .state {
+    transform: scale(1.5);
+    transform-origin: left center;
+  }
+  
+  .pretty.p-switch .state label {
+    text-indent: 0.3em !important;
+  } 
+
+  .pretty.p-switch input {
+    min-width: 3em !important;
+}
+
+
+/* Thumb (circle) always white */
+/* div.pretty.p-switch input ~ .state label:after,
+div.pretty.p-switch input:checked ~ .state label:after {
+  background-color: #4CAF50 !important;
+} */
+div.pretty.p-switch input:checked~.state label:after {
+  background-color:  #9DE331 !important;
+  left: 1em;
+}
+
+div.pretty.p-switch input:checked~.state:before {
+  border-color: #9DE331  !important;
+}
+
+input[type="number"]:focus {
+  outline: none;
+}
+
+.dart-mode {
+  color: #ffffff !important;
+}
+
+.dark-mode-curve.custom-curve2::after {
+  background-color: #050911;
+}
+
+/* .custom-curve-bottom::after {
+  background-color: #050911;
+} */
+
+/* .dark-mode-curve.custom-curve2::before {
+  border: 1px solid lightslategray;
+}
+
+.dark-mode-curve.custom-curve::before{
+  border: 1px solid lightslategray;
+  
+} 
+
+.dark-mode-curve.custom-curve::after {
+  border: 1px solid lightslategray;
+  background-color: lightslategray;
+} */
+
+.dark-mode-curve.custom-curve::after {
+  background-color: #050911;
+}
+.dark-mode-curve.custom-curve2-bottom::after {
+  background-color: #050911;
+}
+
+
+.dark-mode-curve.custom-curve-bottom::after {
+  background-color: #050911;
+}
+.dark-mode-curve.custom-curve2{
+  background: #1F2937;
+}
+.dark-mode-curve.custom-curve2::before{
+  background: #1F2937;
+}
+
+.dark-mode-curve.custom-curve2-bottom {
+  background: #1F2937;
+}
+.dark-mode-curve.custom-curve2-bottom::before{
+  background: #1F2937;
+}
+
+.dark-mode-curve .number-form {
+    color: white;
+}
+/* Hide arrows in Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide arrows in Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.dark-mode-curve.origin-top-right{
+  background: #1F2937;
+}
+
+.fade-toast-enter-active,
+.fade-toast-leave-active {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fade-toast-enter-from,
+.fade-toast-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
