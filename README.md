@@ -2,9 +2,10 @@
 
 Stay ahead with real-time exchange rates and make confident currency conversions whenever and wherever you need them.
 
-![Currency Converter Screenshot](https://raw.githubusercontent.com/christianuyeh/christianuyeh/master/assets/currency-converter-preview-dark.png)
+![Currency Converter Screenshot](https://raw.githubusercontent.com/christianuyeh/Currency-Converter/master/assets/currency-converter-preview-dark.png)
 
-![Currency Converter Screenshot](https://raw.githubusercontent.com/christianuyeh/christianuyeh/master/assets/currency-converter-preview-light.png)
+![Currency Converter Screenshot](https://raw.githubusercontent.com/christianuyeh/Currency-Converter/master/assets/currency-converter-preview-light.png)
+
 
 ---
 
