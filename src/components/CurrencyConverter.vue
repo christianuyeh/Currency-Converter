@@ -75,10 +75,10 @@
       </div>
     </transition>
 
-    <div class="flex items-center justify-center min-h-screen">
-      <div class="flex flex-col w-[70%]">
-        <div class="flex items-center mb-4 w-full">
-          <div class="flex flex-col">
+    <div class="flex sm:items-center sm:justify-center justify-start min-h-screen m-5 sm:m-0">
+      <div class="flex flex-col w-full sm:w-[75%]">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center mb-4 w-full">
+          <div class="flex flex-col mr-5 sm:mr-0">
             <div class="flex items-center">
               <img
                 src="/currency.png"
@@ -88,7 +88,7 @@
                 decoding="async"
               />
               <div
-                class="text-[2.5rem] font-bold ml-3"
+                class="text-[2rem] sm:text-[2.5rem]  font-bold ml-3"
                 :class="{ 'text-white': !mode }"
               >
                 CurrencyConverter
@@ -99,8 +99,7 @@
               currency <br />conversions whenever and wherever you need them.
             </div>
           </div>
-          <div
-            class="inline-flex items-center px-4 py-1 border border-gray-300 rounded-full text-sm font-medium ml-auto"
+          <div class="inline-flex items-center px-4 py-1 border border-gray-300 rounded-full text-sm font-medium mt-4 sm:mt-0 sm:ml-auto"
             :class="[!mode ? 'text-white' : 'text-gray-700']"
           >
             <span class="relative flex size-2 mr-2">
@@ -114,15 +113,12 @@
             API USAGE
           </div>
         </div>
-        <div
-          class="rounded-xl py-[100px] px-5 border"
-          :class="[
-            !mode
+        <div class="rounded-xl py-[100px] px-5 border" :class="[!mode
               ? 'bg-gray-950/50 border-gray-500'
               : 'bg-gray-50 border-gray-300',
           ]"
         >
-          <div class="grid grid-cols-2 gap-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div
               class="rounded-xl shadow-lg p-4"
               :class="[
@@ -164,8 +160,7 @@
                 </div>
               </div>
             </div>
-            <div
-              class="rounded-xl shadow-lg p-4"
+            <div class="rounded-xl shadow-lg p-4"
               :class="[
                 !mode ? 'bg-gray-950/50 border  border-gray-500' : 'bg-white',
               ]"
@@ -184,24 +179,30 @@
                     !mode ? 'bg-gray-950/50 dark-mode-curve' : 'bg-gray-50',
                   ]"
                 >
-                  <div
-                    class="custom-curve2 p-3 h-full bg-white flex items-center"
-                    :class="{ 'dark-mode-curve': !mode }"
-                  >
-                    <div
-                      class="flex items-center cursor-pointer w-[65%] z-[50]"
-                    >
+                  <div class="custom-curve2 p-3 h-full bg-white flex items-center" :class="{ 'dark-mode-curve': !mode }">
+                    <div class="flex items-center cursor-pointer w-[65%] z-[50]">
                       <img
-                        class="flag"
-                        :src="`https://flagcdn.com/h60/${baseCurrency.imageCode}.png`"
-                        width="16"
-                        height="16"
-                        loading="lazy"
-                        decoding="async"
-                        :class="['currency-box', { 'move-down': isSwitching }]"
+                          class="flag-sm block sm:hidden"
+                          :src="`https://flagcdn.com/h60/${baseCurrency.imageCode}.png`"
+                          width="16"
+                          height="16"
+                          loading="lazy"
+                          decoding="async"
+                          :class="['currency-box', { 'move-down': isSwitching }]"
+                      />
+
+                      <!-- Larger screens (flag) -->
+                      <img
+                          class="flag hidden sm:block"
+                          :src="`https://flagcdn.com/h60/${baseCurrency.imageCode}.png`"
+                          width="16"
+                          height="16"
+                          loading="lazy"
+                          decoding="async"
+                          :class="['currency-box', { 'move-down': isSwitching }]"
                       />
                       <div
-                        class="mx-3 text-l font-semibold"
+                        class="mx-3 text-sm sm:text-l font-semibold"
                         :class="[
                           'currency-box',
                           { 'move-down': isSwitching, 'text-white': !mode },
@@ -289,7 +290,7 @@
               <div class="flex items-center justify-center">
                 <div
                   @click="onSwitch"
-                  class="rounded-full w-[50px] h-[50px] bg-[#9DE331] cursor-pointer z-[50] -mt-[18px] flex items-center justify-center"
+                  class="rounded-full w-[50px] h-[50px] bg-[#9DE331] cursor-pointer z-[50] -mt-[18px] flex items-center justify-center ml-[-23px] lg:ml-0"
                 >
                   <i class="fa-solid fa-arrows-up-down"></i>
                 </div>
@@ -310,17 +311,29 @@
                     <div
                       class="flex items-center cursor-pointer w-[65%] z-[50]"
                     >
+
                       <img
-                        class="flag"
-                        :src="`https://flagcdn.com/h60/${baseExchangeCurrency.imageCode}.png`"
-                        width="16"
-                        height="16"
-                        loading="lazy"
-                        decoding="async"
-                        :class="['currency-box', { 'move-up': isSwitching }]"
+                          class="flag-sm block sm:hidden"
+                          :src="`https://flagcdn.com/h60/${baseExchangeCurrency.imageCode}.png`"
+                          width="16"
+                          height="16"
+                          loading="lazy"
+                          decoding="async"
+                          :class="['currency-box', { 'move-down': isSwitching }]"
+                      />
+
+                      <!-- Larger screens (flag) -->
+                      <img
+                          class="flag hidden sm:block"
+                          :src="`https://flagcdn.com/h60/${baseExchangeCurrency.imageCode}.png`"
+                          width="16"
+                          height="16"
+                          loading="lazy"
+                          decoding="async"
+                          :class="['currency-box', { 'move-down': isSwitching }]"
                       />
                       <div
-                        class="mx-3 text-l font-semibold"
+                        class="mx-3 text-sm sm:text-l font-semibold"
                         :class="[
                           'currency-box',
                           { 'move-up': isSwitching, 'text-white': !mode },
