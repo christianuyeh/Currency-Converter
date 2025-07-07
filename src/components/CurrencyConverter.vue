@@ -430,7 +430,7 @@
           <div class="flex flex-col">
             <div class="flex items-center mb-2">
               <p class="text-gray-400">Built by</p>
-              <a class="mx-1" href="https://google.com" target="_blank"
+              <a class="mx-1" href="https://christianuyeh.com" target="_blank"
                 ><span class="underline text-gray-400">Christian Uyeh </span
                 ><i
                   class="fa-solid fa-arrow-up-right-from-square ml-1 text-gray-400"
